@@ -13,14 +13,14 @@
                 <div class="heading-btn-group">
                     <a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
                     <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
-                    <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Schedule</span></a>
+                    <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Renovations</span></a>
                 </div>
             </div>
         </div>
 
         <div class="breadcrumb-line">
             <ul class="breadcrumb">
-                <li><a href="{{'/home'}}"><i class="icon-home2 position-left"></i> Home</a></li>
+                <li><a href="{{'/dashboard'}}"><i class="icon-home2 position-left"></i> Home</a></li>
                 <li class="active">Dashboard</li>
             </ul>
 
@@ -139,18 +139,5 @@
         </div>
         <!-- /main charts -->
     </div>
-
-    <!-- /page header -->
-    {{--<div class="row">--}}
-        {{--<div class="col-md-10 col-md-offset-1">--}}
-            {{--<div class="panel panel-default">--}}
-                {{--<div class="panel-heading">Dashboard</div>--}}
-
-                {{--<div class="panel-body">--}}
-                    {{--You are logged in!--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
 
 @endsection
