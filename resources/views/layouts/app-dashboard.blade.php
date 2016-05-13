@@ -30,7 +30,7 @@
 <!-- Main navbar -->
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a class="navbar-brand" href="{{'/dashboard'}}"><img src="assets/images/logo_light.png" alt=""></a>
+        <a class="navbar-brand" href="{{'/dashboard'}}"><img src="{{asset('assets/images/logo_light.png')}}" alt=""></a>
 
         <ul class="nav navbar-nav visible-xs-block">
             <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -63,7 +63,7 @@
             <li class="dropdown dropdown-user">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <img src="{{asset('assets/images/placeholder.jpg')}}" alt="">
-                    <span>{{ Auth::user()->name }}</span>
+                    <span>{{ Auth::user()->firstname }}</span>
                     <i class="caret"></i>
                 </a>
 
@@ -93,7 +93,7 @@
                         <div class="media">
                             <a href="#" class="media-left"><img src="{{asset('assets/images/placeholder.jpg')}}" class="img-circle img-sm" alt=""></a>
                             <div class="media-body">
-                                <span class="media-heading text-semibold">{{ Auth::user()->name }}</span>
+                                <span class="media-heading text-semibold">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
                                 <div class="text-size-mini text-muted">
                                     <i class="icon-pin text-size-small"></i> &nbsp;Sydney, NSW
                                 </div>
@@ -123,7 +123,7 @@
                             <li>
                                 <a href="#"><i class="fa fa-user-plus"></i> <span>Clients</span></a>
                                 <ul>
-                                    <li><a href="layout_navbar_fixed.html">Add New Student</a></li>
+                                    <li><a href="{{'/student'}}">Add New Student</a></li>
                                     <li><a href="layout_navbar_sidebar_fixed.html">Search Student</a></li>
                                     <li><a href="layout_sidebar_fixed_native.html">Update Student</a></li>
                                     <li class="navigation-divider"></li>
@@ -203,6 +203,48 @@
         <div class="content-wrapper">
             <!-- /page container -->
             <div class="container">
+                <!-- Page header -->
+                <div class="page-header page-header-default">
+                    <div class="page-header-content">
+                        <div class="page-title">
+                            <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Home</span> - Dashboard</h4>
+                        </div>
+
+                        <div class="heading-elements">
+                            <div class="heading-btn-group">
+                                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
+                                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
+                                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Renovations</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="breadcrumb-line">
+                        <ul class="breadcrumb">
+                            <li><a href="{{'/dashboard'}}"><i class="icon-home2 position-left"></i> Home</a></li>
+                            <li class="active">Dashboard</li>
+                        </ul>
+
+                        <ul class="breadcrumb-elements">
+                            <li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="icon-gear position-left"></i>
+                                    Settings
+                                    <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+                                    <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+                                    <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 @yield('content')
                 <!-- Footer -->
                 {{--<div class="footer text-muted">--}}
