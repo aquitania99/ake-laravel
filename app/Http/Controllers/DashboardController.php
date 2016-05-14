@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Minotaur\Http\Controllers;
 
-use App\Http\Requests;
+use Minotaur\Http\Requests;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller

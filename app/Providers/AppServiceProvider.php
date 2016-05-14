@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Minotaur\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

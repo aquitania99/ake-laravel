@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Minotaur\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use Minotaur\Http\Requests;
 
 class StudentController extends Controller
 {

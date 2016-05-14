@@ -11,11 +11,24 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(Minotaur\Models\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
+        'firstname' => $faker->firstName,
+        'lastname' => $faker->lastName,
+        'username' => $faker->userName,
         'email' => $faker->safeEmail,
-        'password' => bcrypt(str_random(10)),
+        'password' => bcrypt('Pass@word01'),
+        'mobile' => $faker->phoneNumber,
+        'gender' => 'M',
+        'nationality' => $faker->country,
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(Minotaur\Models\Profile::class, function (Faker\Generator $faker) {
+    return [
+        'user_id' => $faker->firstName,
+        'status' => $faker->lastName,
+        'native_language' => $faker->languageCode
     ];
 });

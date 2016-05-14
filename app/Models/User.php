@@ -1,8 +1,9 @@
 <?php
 
-namespace App;
+namespace Minotaur\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Minotaur\Models\Profile;
 
 class User extends Authenticatable
 {
@@ -23,4 +24,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function profile() {
+        return $this->hasOne(Profile::class, 'user_id');
+    }
 }
