@@ -21,6 +21,7 @@ $factory->define(Minotaur\Models\User::class, function (Faker\Generator $faker) 
         'mobile' => $faker->phoneNumber,
         'gender' => 'M',
         'nationality' => $faker->country,
+        'dob' => $faker->date('Y-m-d','1995'),
         'remember_token' => str_random(10),
     ];
 });
@@ -30,5 +31,40 @@ $factory->define(Minotaur\Models\Profile::class, function (Faker\Generator $fake
         'user_id' => $faker->firstName,
         'status' => $faker->lastName,
         'native_language' => $faker->languageCode
+    ];
+});
+
+$factory->define(Minotaur\Models\Counsellor::class, function (Faker\Generator $faker) {
+    return [
+        'firstname' => $faker->firstName,
+        'lastname' => $faker->lastName,
+        'email' => $faker->safeEmail,
+        'password' => bcrypt('Pass@word01'),
+        'mobile' => $faker->phoneNumber,
+        'active' => 1,
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(Minotaur\Models\Passport::class, function (Faker\Generator $faker) {
+    return [
+        'passport_number' => $faker->numerify(),
+        'passport_issue_date' => $faker->dateTimeBetween('-5 years','now'),
+        'passport_expiry_date' => $faker->dateTimeBetween('+5 years','+10 years'),
+        'passport_issuing_authority' => 'Some Embassy',
+    ];
+});
+
+$factory->define(Minotaur\Models\Office::class, function (Faker\Generator $faker) {
+    return [
+        'passport_number' => $faker->numerify(),
+        'passport_issue_date' => $faker->dateTimeBetween('-5 years','now'),
+        'passport_expiry_date' => $faker->dateTimeBetween('+5 years','+10 years'),
+        'passport_issuing_authority' => 'Some Embassy',
+        'address_line1' => $faker->address,
+        'phone' => $faker->phoneNumber,
+        'city' => $faker->city,
+        'country' => $faker->country,
+        'postcode' => $faker->postcode,
     ];
 });

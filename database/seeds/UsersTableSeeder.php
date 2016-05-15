@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Minotaur\Models\User;
 use Minotaur\Models\Profile;
+use Minotaur\Models\Counsellor;
 
 class UsersTableSeeder extends Seeder
 {
@@ -15,12 +16,14 @@ class UsersTableSeeder extends Seeder
     {
         User::truncate();
         Profile::truncate();
+        Counsellor::truncate();
 
-        factory(Minotaur\Models\User::class, 10)->create()->each(function ($user) {
+        factory(User::class, 10)->create()->each(function ($user) {
 
             $profile = factory(Minotaur\Models\Profile::class)->make();
 
             $user->profile()->save($profile);
+
         });
     }
 }

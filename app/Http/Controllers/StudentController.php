@@ -4,6 +4,7 @@ namespace Minotaur\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Http\Response;
 use Minotaur\Http\Requests;
 
 class StudentController extends Controller
@@ -26,5 +27,11 @@ class StudentController extends Controller
     public function index()
     {
         return view('students.student');
+    }
+
+    public function store(Request $request)
+    {
+        $userData = json_encode( $request->getContent() );
+
     }
 }

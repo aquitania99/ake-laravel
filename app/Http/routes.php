@@ -19,4 +19,18 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/dashboard', 'DashboardController@index');
+
+Route::get('/profile/{id}', 'ProfileController@show');
+
 Route::get('/student', 'StudentController@index');
+
+
+Route::get('/register-counsellor', [
+    'uses' => 'AuthController@index',
+    'as'   => 'counsellor_show_path',
+]);
+
+Route::post('/register-counsellor', [
+    'uses' => 'AuthController@store',
+    'as'   => 'counsellor_store_path'
+]);

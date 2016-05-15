@@ -3,7 +3,6 @@
 namespace Minotaur\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Minotaur\Models\Profile;
 
 class User extends Authenticatable
 {
@@ -28,4 +27,13 @@ class User extends Authenticatable
     public function profile() {
         return $this->hasOne(Profile::class, 'user_id');
     }
+    
+    public function counsellors() {
+        return $this->belongsTo(Counsellor::class, 'counsellor_id');
+    }
+
+//    public function passport() {
+//        return $this->hasOne(Passport::class);
+//    }
+
 }

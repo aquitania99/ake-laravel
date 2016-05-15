@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ProfilesTable extends Migration
+class CreatePassportsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,14 @@ class ProfilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('profiles', function($table) {
+        Schema::create('passports', function($table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('status'); // married, single, de facto, divorced, widowed
-            $table->string('native_language');
+            $table->string('passport_number');
+            $table->date('passport_issue_date');
+            $table->date('passport_expiry_date');
+            $table->integer('passport_issuing_authority');
             $table->timestamps();
-
         });
     }
 
@@ -28,6 +29,6 @@ class ProfilesTable extends Migration
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('profiles');
+        Schema::dropIfExists('passports');
     }
 }

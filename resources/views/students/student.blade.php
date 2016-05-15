@@ -3,14 +3,18 @@
 @section('content')
 
     <!-- Theme JS files -->
-    <script type="text/javascript" src="assets/js/plugins/forms/wizards/steps.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
-    <script type="text/javascript" src="assets/js/core/libraries/jasny_bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/forms/validation/validate.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/extensions/cookie.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/wizards/steps.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/libraries/jasny_bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/validation/validate.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/extensions/cookie.js')}}"></script>
 
-    <script type="text/javascript" src="assets/js/pages/wizard_steps.js"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/wizard_steps.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/pickers/pickadate/picker.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/pickers/pickadate/picker.date.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/picker_date.js')}}"></script>
     <!-- /theme JS files -->
 
     <!-- Content area -->
@@ -19,7 +23,7 @@
         <!-- Wizard with validation -->
         <div class="panel panel-white">
             <div class="panel-heading">
-                <h6 class="panel-title">Wizard with validation</h6>
+                <h6 class="panel-title">User Profile data</h6>
                 <div class="heading-elements">
                     <ul class="icons-list">
                         <li><a data-action="collapse"></a></li>
@@ -34,169 +38,197 @@
                 <fieldset>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Select location: <span class="text-danger">*</span></label>
-                                <select name="location" data-placeholder="Select position" class="select required">
-                                    <option></option>
-                                    <optgroup label="North America">
-                                        <option value="1">United States</option>
-                                        <option value="2">Canada</option>
-                                    </optgroup>
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Your name:</label>
+                                    <div class="col-lg-9">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input placeholder="First name" class="form-control" type="text">
+                                            </div>
 
-                                    <optgroup label="Latin America">
-                                        <option value="3">Chile</option>
-                                        <option value="4">Argentina</option>
-                                        <option value="5">Colombia</option>
-                                        <option value="6">Peru</option>
-                                    </optgroup>
+                                            <div class="col-md-6">
+                                                <input placeholder="Last name" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding:1em"></div>
 
-                                    <optgroup label="Europe">
-                                        <option value="8">Croatia</option>
-                                        <option value="9">Hungary</option>
-                                        <option value="10">Ukraine</option>
-                                        <option value="11">Greece</option>
-                                    </optgroup>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Username:</label>
+                                    <div class="col-lg-9">
+                                        <input placeholder="username" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div style="padding:1em"></div>
 
-                                    <optgroup label="Middle East &amp; Africa">
-                                        <option value="21">Egypt</option>
-                                        <option value="22">Israel</option>
-                                        <option value="23">Nigeria</option>
-                                        <option value="24">United Arab Emirates</option>
-                                    </optgroup>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Email:</label>
+                                    <div class="col-lg-9">
+                                        <input placeholder="your@email.here" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div style="padding:1em"></div>
 
-                                    <optgroup label="Asia Pacific">
-                                        <option value="26">Australia</option>
-                                        <option value="27">China</option>
-                                        <option value="28">India</option>
-                                        <option value="29">Singapore</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                        </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Mobile #:</label>
+                                    <div class="col-lg-9">
+                                        <input placeholder="+99-99-9999-9999" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div style="padding:1em"></div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Select position: <span class="text-danger">*</span></label>
-                                <select name="position" data-placeholder="Select position" class="select required">
-                                    <option></option>
-                                    <optgroup label="Developer Relations">
-                                        <option value="1">Sales Engineer</option>
-                                        <option value="2">Ads Solutions Consultant</option>
-                                        <option value="3">Technical Solutions Consultant</option>
-                                        <option value="4">Business Intern</option>
-                                    </optgroup>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Gender:</label>
+                                    <div class="col-lg-9">
+                                        <label class="radio-inline">
+                                            <div class="choice"><input type="radio" checked="checked" class="styled" name="gender"></div>
+                                            Male
+                                        </label>
 
-                                    <optgroup label="Engineering &amp; Design">
-                                        <option value="5">Interaction Designer</option>
-                                        <option value="6">Technical Program Manager</option>
-                                        <option value="7">Software Engineer</option>
-                                        <option value="8">Information Security Engineer</option>
-                                    </optgroup>
+                                        <label class="radio-inline">
+                                            <div class="choice"><input type="radio" class="styled" name="gender"></div>
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+                                <div style="padding:1em"></div>
 
-                                    <optgroup label="Marketing &amp; Communications">
-                                        <option value="13">Media Outreach Manager</option>
-                                        <option value="14">Research Manager</option>
-                                        <option value="15">Marketing Intern</option>
-                                        <option value="16">Business Intern</option>
-                                    </optgroup>
+                                <div class="form-group">
+                                    <label>Date of birth:</label>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <select name="birth-month" data-placeholder="Month" class="select">
+                                                    <option></option>
+                                                    <option value="1">January</option>
+                                                    <option value="2">February</option>
+                                                    <option value="3">March</option>
+                                                    <option value="4">April</option>
+                                                    <option value="5">May</option>
+                                                    <option value="6">June</option>
+                                                    <option value="7">July</option>
+                                                    <option value="8">August</option>
+                                                    <option value="9">September</option>
+                                                    <option value="10">October</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">December</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
-                                    <optgroup label="Sales Operations">
-                                        <option value="17">Sales Operations Analyst</option>
-                                        <option value="18">Technology Product Manager</option>
-                                        <option value="19">Product Expert</option>
-                                        <option value="20">Sales Insights Analyst</option>
-                                        <option value="21">Customer Operations Analyst</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <select name="birth-day" data-placeholder="Day" class="select">
+                                                    <option></option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="...">...</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Applicant name: <span class="text-danger">*</span></label>
-                                <input type="text" name="name" class="form-control required" placeholder="John Doe">
-                            </div>
-                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <select name="birth-year" data-placeholder="Year" class="select">
+                                                    <option></option>
+                                                    <option value="1">1980</option>
+                                                    <option value="2">1981</option>
+                                                    <option value="3">1982</option>
+                                                    <option value="4">1983</option>
+                                                    <option value="5">1984</option>
+                                                    <option value="6">1985</option>
+                                                    <option value="7">1986</option>
+                                                    <option value="8">1987</option>
+                                                    <option value="9">1988</option>
+                                                    <option value="10">1989</option>
+                                                    <option value="11">1990</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding:1em"></div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Email address: <span class="text-danger">*</span></label>
-                                <input type="email" name="email" class="form-control required" placeholder="your@email.com">
-                            </div>
-                        </div>
-                    </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Country:</label>
+                                            <select data-placeholder="Select your country" class="select">
+                                                <option></option>
+                                                <option value="Arg">Argentina</option>
+                                                <option value="Bol">Bolivia</option>
+                                                <option value="Col">Colombia</option>
+                                                <option value="Ecu">Ecuador</option>
+                                                <option value="Etc">Etc...</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Phone #:</label>
-                                <input type="text" name="tel" class="form-control" placeholder="+99-99-9999-9999" data-mask="+99-99-9999-9999">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label>Date of birth:</label>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <select name="birth-month" data-placeholder="Month" class="select">
-                                            <option></option>
-                                            <option value="1">January</option>
-                                            <option value="2">February</option>
-                                            <option value="3">March</option>
-                                            <option value="4">April</option>
-                                            <option value="5">May</option>
-                                            <option value="6">June</option>
-                                            <option value="7">July</option>
-                                            <option value="8">August</option>
-                                            <option value="9">September</option>
-                                            <option value="10">October</option>
-                                            <option value="11">November</option>
-                                            <option value="12">December</option>
-                                        </select>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>State/Province:</label>
+                                            <input type="text" placeholder="NSW" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <select name="birth-day" data-placeholder="Day" class="select">
-                                            <option></option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="...">...</option>
-                                            <option value="31">31</option>
-                                        </select>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>ZIP code:</label>
+                                            <input type="text" placeholder="2000" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>City:</label>
+                                            <input type="text" placeholder="Sydney" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <select name="birth-year" data-placeholder="Year" class="select">
-                                            <option></option>
-                                            <option value="1">1980</option>
-                                            <option value="2">1981</option>
-                                            <option value="3">1982</option>
-                                            <option value="4">1983</option>
-                                            <option value="5">1984</option>
-                                            <option value="6">1985</option>
-                                            <option value="7">1986</option>
-                                            <option value="8">1987</option>
-                                            <option value="9">1988</option>
-                                            <option value="10">1989</option>
-                                            <option value="11">1990</option>
-                                        </select>
-                                    </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <div class="form-group">
+                                <label>Passport No:</label>
+                                <input placeholder="ABC123456" class="form-control" type="text">
+                            </div>
+
+                            <div class="content-group-lg">
+                                <label>Passport issue date:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="icon-calendar5"></i></span>
+                                    <input type="text" class="form-control pickadate-selectors" placeholder="Choose date">
                                 </div>
                             </div>
+
+                            <div class="content-group-lg">
+                                <label>Passport expiry date:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="icon-calendar5"></i></span>
+                                    <input type="text" class="form-control pickadate-selectors" placeholder="Choose date">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Additional notes:</label>
+                                <textarea rows="5" cols="5" class="form-control" placeholder="Enter your notes here"></textarea>
+                            </div>
+                            <div style="padding:1em"></div>
                         </div>
                     </div>
                 </fieldset>

@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Minotaur\User::class,
+            'model' => Minotaur\Models\User::class,
         ],
 
         // 'users' => [

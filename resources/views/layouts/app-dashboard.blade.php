@@ -30,7 +30,7 @@
 <!-- Main navbar -->
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a class="navbar-brand" href="{{'/dashboard'}}"><img src="{{asset('assets/images/logo_light.png')}}" alt=""></a>
+        <a class="navbar-brand" href="{{url('/dashboard')}}"><img src="{{asset('assets/images/logo_light.png')}}" alt=""></a>
 
         <ul class="nav navbar-nav visible-xs-block">
             <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -63,12 +63,12 @@
             <li class="dropdown dropdown-user">
                 <a class="dropdown-toggle" data-toggle="dropdown">
                     <img src="{{asset('assets/images/placeholder.jpg')}}" alt="">
-                    <span>{{ Auth::user()->firstname }}</span>
+                    <span>{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</span>
                     <i class="caret"></i>
                 </a>
 
                 <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                    <li><a href="{{'/profile/'.Auth::user()->id}}"><i class="icon-user-plus"></i> My profile</a></li>
                     <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
                     <li><a href="{{ url('/logout') }}"><i class="icon-switch2"></i> Logout</a></li>
                 </ul>
@@ -174,7 +174,7 @@
                                     <li>
                                         <a href="#"><i class="icon-people"></i> <span>Manage Counsellors</span></a>
                                         <ul>
-                                            <li><a href="extra_sliders_noui.html">Create</a></li>
+                                            <li><a href="{{'/register-counsellor'}}">Create</a></li>
                                             <li><a href="extra_sliders_noui.html">Update</a></li>
                                             <li><a href="extra_sliders_noui.html">Remove</a></li>
                                         </ul>
