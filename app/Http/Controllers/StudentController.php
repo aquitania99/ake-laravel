@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
 use Minotaur\Http\Requests;
+use Minotaur\Models\User;
 
 class StudentController extends Controller
 {
@@ -26,10 +27,41 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('students.student');
+        $users = User::all();
+        $array = array();
+        foreach ($users as $key => $user) {
+            $array[] = [
+                'name'  => $user->firstname.' '.$user->lastname,
+                'email' => $user->email,
+                'gender' => $user->gender,
+                'nationality' => $user->nationality,
+                'dob' => $user->dob,
+                'created' => $user->created_at
+            ];
+        }
+        $test = json_encode($array, true);
+//        dd($test);
+        return view('students.list-students', 'test', $array);
     }
 
-    public function store(Request $request)
+    public function addUser()
+    {
+        return view('students.add');
+    }
+
+    public function storeUser(Request $request)
+    {
+        $userData = json_encode( $request->getContent() );
+
+    }
+
+    public function searchUser(Request $request)
+    {
+        return view('students.search-students');
+
+    }
+
+    public function listUsers(Request $request)
     {
         $userData = json_encode( $request->getContent() );
 

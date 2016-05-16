@@ -13,6 +13,6 @@ class ProfileController extends Controller
 //        $profile = Profile::with('user')->get();
         $profile = Profile::findOrFail($id);
 //        var_dump($profile);exit;
-        return view('students.profile', ['profile' => $profile]);
+        return view('students.user-profile', ['profile' => $profile]);
     }
 }

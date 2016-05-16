@@ -23,7 +23,10 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::get('/profile/{id}', 'ProfileController@show');
 
 Route::get('/student', 'StudentController@index');
+Route::get('/student/add', 'StudentController@addUser');
+Route::get('/student/search', 'StudentController@searchUser');
 
+Route::get('/invoices', 'InvoiceController@index');
 
 Route::get('/register-counsellor', [
     'uses' => 'AuthController@index',

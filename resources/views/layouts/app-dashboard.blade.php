@@ -123,9 +123,10 @@
                             <li>
                                 <a href="#"><i class="fa fa-user-plus"></i> <span>Clients</span></a>
                                 <ul>
-                                    <li><a href="{{'/student'}}">Add New Student</a></li>
-                                    <li><a href="layout_navbar_sidebar_fixed.html">Search Student</a></li>
-                                    <li><a href="layout_sidebar_fixed_native.html">Update Student</a></li>
+                                    <li><a href="{{'/student'}}">Show Students</a></li>
+                                    <li><a href="{{'/student/add'}}">Add New Student</a></li>
+                                    <li><a href="{{'/student/search'}}">Search Student</a></li>
+                                    <li><a href="#">Update Student</a></li>
                                     <li class="navigation-divider"></li>
                                     <li><a href="boxed_default.html">Quotations</a></li>
                                     <li><a href=""><i class="icon-folder-upload3"></i><span>Documents</span> </a> </li>
@@ -163,6 +164,7 @@
                             <li>
                                 <a href="#"><i class="icon-cash3"></i> <span>Invoicing</span></a>
                                 <ul>
+                                    <li><a href="{{'/invoices'}}">Invoice dashboard</a></li>
                                     <li><a href="components_modals.html">Search invoice</a></li>
                                     <li><a href="components_dropdowns.html">Re-issue invoice</a></li>
                                     <li><a href="components_tabs.html">Create new invoice</a></li>
@@ -203,6 +205,7 @@
         <div class="content-wrapper">
             <!-- /page container -->
             <div class="container">
+                @section('page-header')
                 <!-- Page header -->
                 <div class="page-header page-header-default">
                     <div class="page-header-content">
@@ -245,6 +248,7 @@
                         </ul>
                     </div>
                 </div>
+                @show
                 @yield('content')
                 <!-- Footer -->
                 {{--<div class="footer text-muted">--}}
