@@ -14,15 +14,14 @@ class CounsellorsTableSeeder extends Seeder
     public function run()
     {
 //        User::truncate();
-//        Counsellor::truncate();
-
-//        factory(Minotaur\Models\Counsellor::class, 10)->create();
-
-//        factory(Counsellor::class, 10)->create()->each(function ($user) {
+        Counsellor::truncate();
+        
+        factory(Counsellor::class, 2)->create();
+//            ->each(function ($counsellor) {
 //
 //            $user = factory(User::class)->make();
 //
-//            $user->counsellors()->save();
+//            $user->counsellors()->save($user);
 //            dd($user);
 //        });
     }

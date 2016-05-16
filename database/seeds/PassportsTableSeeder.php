@@ -11,14 +11,15 @@ class PassportsTableSeeder extends Seeder
      */
     public function run()
     {
-//        factory(\Minotaur\Models\Passport::class, 10)->create()->each(function ($passport) {
+        factory(\Minotaur\Models\Passport::class, 10)->create();
+//            ->each(function ($passport) {
 //
 //            $profile = factory(Minotaur\Models\Profile::class)->make();
 //
-//            $profile->passport()->save($passport, 'passport_id');
-//
-////            $counsellor = factory(Minotaur\Models\Counsellor::class)->make();
-////            $user->counsellor()->save($counsellor);
+//            $profile->passport()->save($passport, 'prf_id', 'id');
+
+//            $counsellor = factory(Minotaur\Models\Counsellor::class)->make();
+//            $user->counsellor()->save($counsellor);
 //        });
     }
 }

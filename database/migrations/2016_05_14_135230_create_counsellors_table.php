@@ -21,7 +21,7 @@ class CreateCounsellorsTable extends Migration
             $table->string('password');
             $table->integer('mobile');
             $table->string('language');
-            $table->char('active');
+            $table->boolean('active');
             $table->rememberToken();
             $table->timestamps();
         });

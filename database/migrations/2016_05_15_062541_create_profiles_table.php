@@ -14,13 +14,13 @@ class CreateProfilesTable extends Migration
     {
         Schema::create('profiles', function($table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->string('native_language');
-            $table->integer('passport_id');
-            $table->integer('address_id');
-            $table->integer('employment_id');
-            $table->integer('education_id');
-            $table->integer('aussie_visa_id');
+            $table->integer('passport_id')->unsigned();
+            $table->integer('address_id')->unsigned();
+            $table->integer('employment_id')->unsigned();
+            $table->integer('education_id')->unsigned();
+            $table->integer('aussie_visa_id')->unsigned();
             $table->char('has_ielts_test');
             $table->integer('ielts_id');
             $table->string('status'); // married, single, de facto, divorced, widowed

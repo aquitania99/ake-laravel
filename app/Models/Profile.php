@@ -13,6 +13,6 @@ class Profile extends Model
 
     public function passport()
     {
-        return $this->belongsTo(Passport::class);
+        return $this->hasOne(\Minotaur\Models\Profile::class, 'profile_id');
     }
 }

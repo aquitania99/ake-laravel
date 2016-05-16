@@ -9,7 +9,7 @@ class Counsellor extends Model
     
     public function users()
     {
-        return $this->hasMany(User::class);
+        return $this->hasMany(Counsellor::class, 'counsellor_id');
     }
 
     public function office()

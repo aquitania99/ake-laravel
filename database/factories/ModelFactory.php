@@ -13,10 +13,11 @@
 
 $factory->define(Minotaur\Models\User::class, function (Faker\Generator $faker) {
     return [
+        'type'      => 'user',
         'firstname' => $faker->firstName,
         'lastname' => $faker->lastName,
         'username' => $faker->userName,
-        'email' => $faker->safeEmail,
+        'email' => $faker->unique()->safeEmail,
         'password' => bcrypt('Pass@word01'),
         'mobile' => $faker->phoneNumber,
         'gender' => 'M',
@@ -41,7 +42,7 @@ $factory->define(Minotaur\Models\Counsellor::class, function (Faker\Generator $f
         'email' => $faker->safeEmail,
         'password' => bcrypt('Pass@word01'),
         'mobile' => $faker->phoneNumber,
-        'active' => 1,
+        'active' => $faker->boolean(100),
         'remember_token' => str_random(10),
     ];
 });

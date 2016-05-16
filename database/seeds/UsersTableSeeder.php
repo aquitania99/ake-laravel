@@ -21,6 +21,7 @@ class UsersTableSeeder extends Seeder
         factory(User::class, 10)->create()->each(function ($user) {
 
             $profile = factory(Minotaur\Models\Profile::class)->make();
+            $counsellor = factory(Minotaur\Models\Counsellor::class)->make();
 
             $user->profile()->save($profile);
 
