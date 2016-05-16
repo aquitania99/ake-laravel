@@ -27,22 +27,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-//        $users = User::all();
-//        $array = array();
-//        foreach ($users as $key => $user) {
-//            $array[] = [
-//                'name'  => $user->firstname.' '.$user->lastname,
-//                'email' => $user->email,
-//                'gender' => $user->gender,
-//                'nationality' => $user->nationality,
-//                'dob' => $user->dob,
-//                'created' => $user->created_at
-//            ];
-//        }
-//        $test = json_encode($array, true);
-//        dd($users->firstname);
-        return \View::make('students.list-students');
-//        return \View::make('students.list-students')->with('test', $array);
+        $data=User::all();
+        return view('students.list-students')->with('data',$data);
     }
 
     public function addUser()
