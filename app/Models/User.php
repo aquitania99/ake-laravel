@@ -25,11 +25,11 @@ class User extends Authenticatable
     ];
     
     public function profile() {
-        return $this->hasOne(\Minotaur\Models\Profile::class, 'user_id');
+        return $this->hasOne(Profile::class);
     }
     
     public function counsellors() {
-        return $this->belongsTo(\Minotaur\Models\Counsellor::class);
+        return $this->belongsTo(Counsellor::class);
     }
 
 }

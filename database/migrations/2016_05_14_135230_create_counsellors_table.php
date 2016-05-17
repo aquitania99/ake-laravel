@@ -14,7 +14,7 @@ class CreateCounsellorsTable extends Migration
     {
         Schema::create('counsellors', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('offices_id');
+            $table->integer('office_id');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email')->unique();
