@@ -1,18 +1,21 @@
 <?php
+//
+///*
+//|--------------------------------------------------------------------------
+//| Model Factories
+//|--------------------------------------------------------------------------
+//|
+//| Here you may define all of your model factories. Model factories give
+//| you a convenient way to create models for testing and seeding your
+//| database. Just tell the factory how a default model should look.
+//|
+//*/
 
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| Here you may define all of your model factories. Model factories give
-| you a convenient way to create models for testing and seeding your
-| database. Just tell the factory how a default model should look.
-|
-*/
-
-$factory->define(Minotaur\Models\User::class, function (Faker\Generator $faker) {
+$factory->define(\Minotaur\Models\User::class, function (Faker\Generator $faker) {
     return [
+        'counsellor_id' => function () {
+            return factory(\Minotaur\Models\Counsellor::class)->create()->id;
+        },
         'type'      => 'user',
         'firstname' => $faker->firstName,
         'lastname' => $faker->lastName,
@@ -26,6 +29,19 @@ $factory->define(Minotaur\Models\User::class, function (Faker\Generator $faker) 
         'remember_token' => str_random(10),
     ];
 });
+
+//$factory->define(App\Post::class, function ($faker) {
+//    return [
+//        'title' => $faker->title,
+//        'content' => $faker->paragraph,
+//        'user_id' => function () {
+//            return factory(App\User::class)->create()->id;
+//        },
+//        'user_type' => function (array $post) {
+//            return App\User::find($post['user_id'])->type;
+//        }
+//    ];
+//});
 
 $factory->define(Minotaur\Models\Profile::class, function (Faker\Generator $faker) {
     return [
@@ -69,3 +85,4 @@ $factory->define(Minotaur\Models\Office::class, function (Faker\Generator $faker
         'postcode' => $faker->postcode,
     ];
 });
+

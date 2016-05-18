@@ -129,7 +129,7 @@
                                     <li><a href="#">Update Student</a></li>
                                     <li class="navigation-divider"></li>
                                     <li><a href="boxed_default.html">Quotations</a></li>
-                                    <li><a href=""><i class="icon-folder-upload3"></i><span>Documents</span> </a> </li>
+                                    <li><a href="{{'/student/documents'}}">Documents</a> </li>
                                 </ul>
                             </li>
                             <li>

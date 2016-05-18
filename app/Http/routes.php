@@ -25,6 +25,7 @@ Route::get('/profile/{id}', 'ProfileController@show');
 Route::get('/student', 'StudentController@index');
 Route::get('/student/add', 'StudentController@addUser');
 Route::get('/student/search', 'StudentController@searchUser');
+Route::get('/student/documents', 'StudentController@showDocs');
 
 Route::get('/invoices', 'InvoiceController@index');
 

@@ -53,4 +53,10 @@ class StudentController extends Controller
         $userData = json_encode( $request->getContent() );
 
     }
+
+    public function showDocs()
+    {
+        return view('students.show-docs');
+
+    }
 }
