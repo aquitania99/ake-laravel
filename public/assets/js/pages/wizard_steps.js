@@ -144,7 +144,16 @@ $(function() {
         },
 
         onFinished: function (event, currentIndex) {
-            alert("Submitted!");
+            var test = $("form").serialize();
+            $.ajax({
+                type: 'POST',
+                url: $("form").attr("action"),
+                data: test,
+                //or your custom data either as object {foo: "bar", ...} or foo=bar&...
+                success: function(response) { console.log(response) }
+            });
+            console.log(test);
+            alert("Well done Mowgli! The form has been Submitted!");
         }
     });
 

@@ -27,6 +27,8 @@ Route::get('/student/add', 'StudentController@addUser');
 Route::get('/student/search', 'StudentController@searchUser');
 Route::get('/student/documents', 'StudentController@showDocs');
 
+Route::post('/student','StudentController@storeUser');
+
 Route::get('/invoices', 'InvoiceController@index');
 
 Route::get('/register-counsellor', [

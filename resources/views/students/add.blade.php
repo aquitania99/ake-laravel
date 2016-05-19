@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <form class="steps-validation" action="#">
+            <form class="steps-validation" action="{{'/student'}}" method="post" id="addUser">
                 <h6>Personal data</h6>
                 <fieldset>
                     <div class="row">
@@ -44,11 +44,11 @@
                                     <div class="col-lg-9">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <input placeholder="First name" class="form-control" type="text">
+                                                <input placeholder="First name" name="firstname" class="form-control" type="text">
                                             </div>
 
                                             <div class="col-md-6">
-                                                <input placeholder="Last name" class="form-control" type="text">
+                                                <input placeholder="Last name" name="lastname"  class="form-control" type="text">
                                             </div>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Username:</label>
                                     <div class="col-lg-9">
-                                        <input placeholder="username" class="form-control" type="text">
+                                        <input placeholder="username"  name="username" class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div style="padding:1em"></div>
@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Email:</label>
                                     <div class="col-lg-9">
-                                        <input placeholder="your@email.here" class="form-control" type="text">
+                                        <input placeholder="your@email.here" name="email"  class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div style="padding:1em"></div>
@@ -74,7 +74,7 @@
                                 <div class="form-group">
                                     <label class="col-lg-3 control-label">Mobile #:</label>
                                     <div class="col-lg-9">
-                                        <input placeholder="+99-99-9999-9999" class="form-control" type="text">
+                                        <input placeholder="+99-99-9999-9999" name="mobile"  class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div style="padding:1em"></div>
@@ -83,12 +83,12 @@
                                     <label class="col-lg-3 control-label">Gender:</label>
                                     <div class="col-lg-9">
                                         <label class="radio-inline">
-                                            <div class="choice"><input type="radio" checked="checked" class="styled" name="gender"></div>
+                                            <div class="choice"><input type="radio" value="M" checked="checked" class="styled" name="gender"></div>
                                             Male
                                         </label>
 
                                         <label class="radio-inline">
-                                            <div class="choice"><input type="radio" class="styled" name="gender"></div>
+                                            <div class="choice"><input type="radio" value="F"  class="styled" name="gender"></div>
                                             Female
                                         </label>
                                     </div>
@@ -100,7 +100,7 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <select name="birth-month" data-placeholder="Month" class="select">
+                                                <select name="birth-month" data-placeholder="Month" name="dob-month"  class="select">
                                                     <option></option>
                                                     <option value="1">January</option>
                                                     <option value="2">February</option>
@@ -120,7 +120,7 @@
 
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <select name="birth-day" data-placeholder="Day" class="select">
+                                                <select name="birth-day" data-placeholder="Day" name="dob-day"  class="select">
                                                     <option></option>
                                                     <option value="1">1</option>
                                                     <option value="2">2</option>
@@ -140,7 +140,7 @@
 
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <select name="birth-year" data-placeholder="Year" class="select">
+                                                <select name="birth-year" data-placeholder="Year" name="dob-year"  class="select">
                                                     <option></option>
                                                     <option value="1">1980</option>
                                                     <option value="2">1981</option>
@@ -164,13 +164,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Country:</label>
-                                            <select data-placeholder="Select your country" class="select">
+                                            <select data-placeholder="Select your country" name="birth-country"  class="select">
                                                 <option></option>
-                                                <option value="Arg">Argentina</option>
-                                                <option value="Bol">Bolivia</option>
-                                                <option value="Col">Colombia</option>
-                                                <option value="Ecu">Ecuador</option>
-                                                <option value="Etc">Etc...</option>
+                                                <option value="1">Argentina</option>
+                                                <option value="2">Bolivia</option>
+                                                <option value="3">Colombia</option>
+                                                <option value="4">Ecuador</option>
+                                                <option value="5">Etc...</option>
                                             </select>
                                         </div>
                                     </div>
@@ -178,7 +178,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>State/Province:</label>
-                                            <input type="text" placeholder="NSW" class="form-control">
+                                            <input type="text" placeholder="NSW" name="birth-state"  class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -186,15 +186,8 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label>ZIP code:</label>
-                                            <input type="text" placeholder="2000" class="form-control">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="form-group">
                                             <label>City:</label>
-                                            <input type="text" placeholder="Sydney" class="form-control">
+                                            <input type="text" placeholder="Sydney" name="birth-city"  class="form-control">
                                         </div>
                                     </div>
                                 </div>
@@ -205,14 +198,14 @@
                         <div class="col-md-6 ">
                             <div class="form-group">
                                 <label>Passport No:</label>
-                                <input placeholder="ABC123456" class="form-control" type="text">
+                                <input placeholder="ABC123456" name="passport-number"  class="form-control" type="text">
                             </div>
 
                             <div class="content-group-lg">
                                 <label>Passport issue date:</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="icon-calendar5"></i></span>
-                                    <input type="text" class="form-control pickadate-selectors" placeholder="Choose date">
+                                    <input type="text" class="form-control pickadate-selectors"  name="passport-issue-date"  placeholder="Choose date">
                                 </div>
                             </div>
 
@@ -220,13 +213,13 @@
                                 <label>Passport expiry date:</label>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="icon-calendar5"></i></span>
-                                    <input type="text" class="form-control pickadate-selectors" placeholder="Choose date">
+                                    <input type="text" class="form-control pickadate-selectors" name="passport-exp-date"  placeholder="Choose date">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label>Additional notes:</label>
-                                <textarea rows="5" cols="5" class="form-control" placeholder="Enter your notes here"></textarea>
+                                <textarea rows="5" cols="5" class="form-control" name="comments-notes"  placeholder="Enter your notes here"></textarea>
                             </div>
                             <div style="padding:1em"></div>
                         </div>
@@ -511,12 +504,6 @@
                         </div>
 
                         <div class="col-md-6">
-
-                            {{--<div class="form-group">--}}
-                                {{--<label class="display-block">Recommendations:</label>--}}
-                                {{--<input name="recommendations" type="file" class="file-styled">--}}
-                                {{--<span class="help-block">Accepted formats: pdf, doc. Max file size 2Mb</span>--}}
-                            {{--</div>--}}
                             <div class="form-group">
                                 <label>Country:</label>
                                 <select name="university-country" data-placeholder="Choose a Country..." class="select">
@@ -633,7 +620,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Visa type <span class="text-danger">*</span></label>
-                                    <select name="source" data-placeholder="Choose a visa type..." class="select-simple required">
+                                    <select name="source" data-placeholder="Choose a visa type..." class="select-simple">
                                         <option></option>
                                         <option value="1">Turism</option>
                                         <option value="2">Elicos</option>
@@ -645,22 +632,12 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Office where you applied? <span class="text-danger">*</span></label>
-                                        <input type="text" name="experience-position" placeholder="Sydney Embassy" class="form-control required">
+                                        <input type="text" name="experience-position" placeholder="Sydney Embassy" class="form-control">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {{--<div class="row">--}}
-                    {{--<div class="col-md-6">--}}
-                    {{--<div class="form-group">--}}
-                    {{--<label class="display-block">Applicant resume:</label>--}}
-                    {{--<input type="file" name="resume" class="file-styled">--}}
-                    {{--<span class="help-block">Accepted formats: pdf, doc. Max file size 2Mb</span>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--</div>--}}
 
                     <div class="row">
                         <div>
@@ -763,19 +740,11 @@
                             </div>
                         </div>
                         <div class="form-group col-md-6">
-                            {{--<div class="row">--}}
 
                                 <div class="col-md-4">
                                     <label>IELTS Overall score? <span class="text-danger">*</span></label>
-                                    <input type="number" name="experience-position" placeholder="9.0" class="form-control required">
+                                    <input type="number" name="experience-position" placeholder="9.0" class="form-control ">
                                 </div>
-                                {{--<div class="col-md-6">--}}
-                                    {{--<div class="form-group">--}}
-                                        {{--<label>Office where you applied? <span class="text-danger">*</span></label>--}}
-                                        {{--<input type="text" name="experience-position" placeholder="Sydney Embassy" class="form-control required">--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
                         </div>
                         <div class="form-group col-md-6">
                             <div class="col-md-3">
@@ -804,48 +773,6 @@
                             </div>
                         </div>
                     </div>
-
-                    {{--<div class="row">--}}
-                    {{--<div class="col-md-6">--}}
-                    {{--<div class="form-group">--}}
-                    {{--<label>Availability: <span class="text-danger">*</span></label>--}}
-                    {{--<div class="radio">--}}
-                    {{--<label>--}}
-                    {{--<input type="radio" name="availability" class="styled required">--}}
-                    {{--Immediately--}}
-                    {{--</label>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="radio">--}}
-                    {{--<label>--}}
-                    {{--<input type="radio" name="availability" class="styled">--}}
-                    {{--1 - 2 weeks--}}
-                    {{--</label>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="radio">--}}
-                    {{--<label>--}}
-                    {{--<input type="radio" name="availability" class="styled">--}}
-                    {{--3 - 4 weeks--}}
-                    {{--</label>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="radio">--}}
-                    {{--<label>--}}
-                    {{--<input type="radio" name="availability" class="styled">--}}
-                    {{--More than 1 month--}}
-                    {{--</label>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="col-md-6">--}}
-                    {{--<div class="form-group">--}}
-                    {{--<label>Additional information:</label>--}}
-                    {{--<textarea name="additional-info" rows="5" cols="5" placeholder="If you want to add any info, do it here." class="form-control"></textarea>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
                 </fieldset>
 
                 <h6>Additional info</h6>
@@ -999,53 +926,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        {{--<div class="row">--}}
-                                            {{--<div class="col-md-3">--}}
-                                                {{--<div class="form-group">--}}
-                                                    {{--<label>City:</label>--}}
-                                                    {{--<input type="text" placeholder="Sydney" class="form-control">--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
 
                                     </fieldset>
-                                {{--</div>--}}
                             </div>
                         </fieldset>
-
-
-                        {{--<div class="form-group col-md-6">--}}
-                            {{--<div class="row">--}}
-                                {{--<div class="col-md-6">--}}
-                                    {{--<label>Visa type <span class="text-danger">*</span></label>--}}
-                                    {{--<select name="source" data-placeholder="Choose a visa type..." class="select-simple required">--}}
-                                        {{--<option></option>--}}
-                                        {{--<option value="1">Turism</option>--}}
-                                        {{--<option value="2">Elicos</option>--}}
-                                        {{--<option value="3">Graduate</option>--}}
-                                        {{--<option value="4">Skills</option>--}}
-                                        {{--<option value="5">Sponsorship</option>--}}
-                                    {{--</select>--}}
-                                {{--</div>--}}
-                                {{--<div class="col-md-6">--}}
-                                    {{--<div class="form-group">--}}
-                                        {{--<label>Office where you applied? <span class="text-danger">*</span></label>--}}
-                                        {{--<input type="text" name="experience-position" placeholder="Sydney Embassy" class="form-control required">--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
                     </div>
-                    {{--<div class="row">--}}
-                    {{--<div class="col-md-6">--}}
-                    {{--<div class="form-group">--}}
-                    {{--<label class="display-block">Applicant resume:</label>--}}
-                    {{--<input type="file" name="resume" class="file-styled">--}}
-                    {{--<span class="help-block">Accepted formats: pdf, doc. Max file size 2Mb</span>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--</div>--}}
 
                     <div class="row">
                         <div>
@@ -1198,85 +1083,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{--<div class="row">--}}
-                                    {{--<div class="col-md-3">--}}
-                                    {{--<div class="form-group">--}}
-                                    {{--<label>City:</label>--}}
-                                    {{--<input type="text" placeholder="Sydney" class="form-control">--}}
-                                    {{--</div>--}}
-                                    {{--</div>--}}
-                                    {{--</div>--}}
-
                                 </fieldset>
-                                {{--</div>--}}
                             </div>
                         </fieldset>
-
-
-                        {{--<div class="form-group col-md-6">--}}
-                        {{--<div class="row">--}}
-                        {{--<div class="col-md-6">--}}
-                        {{--<label>Visa type <span class="text-danger">*</span></label>--}}
-                        {{--<select name="source" data-placeholder="Choose a visa type..." class="select-simple required">--}}
-                        {{--<option></option>--}}
-                        {{--<option value="1">Turism</option>--}}
-                        {{--<option value="2">Elicos</option>--}}
-                        {{--<option value="3">Graduate</option>--}}
-                        {{--<option value="4">Skills</option>--}}
-                        {{--<option value="5">Sponsorship</option>--}}
-                        {{--</select>--}}
-                        {{--</div>--}}
-                        {{--<div class="col-md-6">--}}
-                        {{--<div class="form-group">--}}
-                        {{--<label>Office where you applied? <span class="text-danger">*</span></label>--}}
-                        {{--<input type="text" name="experience-position" placeholder="Sydney Embassy" class="form-control required">--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
-                        {{--</div>--}}
                     </div>
-
-                    {{--<div class="row">--}}
-                    {{--<div class="col-md-6">--}}
-                    {{--<div class="form-group">--}}
-                    {{--<label>Availability: <span class="text-danger">*</span></label>--}}
-                    {{--<div class="radio">--}}
-                    {{--<label>--}}
-                    {{--<input type="radio" name="availability" class="styled required">--}}
-                    {{--Immediately--}}
-                    {{--</label>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="radio">--}}
-                    {{--<label>--}}
-                    {{--<input type="radio" name="availability" class="styled">--}}
-                    {{--1 - 2 weeks--}}
-                    {{--</label>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="radio">--}}
-                    {{--<label>--}}
-                    {{--<input type="radio" name="availability" class="styled">--}}
-                    {{--3 - 4 weeks--}}
-                    {{--</label>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="radio">--}}
-                    {{--<label>--}}
-                    {{--<input type="radio" name="availability" class="styled">--}}
-                    {{--More than 1 month--}}
-                    {{--</label>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
-
-                    {{--<div class="col-md-6">--}}
-                    {{--<div class="form-group">--}}
-                    {{--<label>Additional information:</label>--}}
-                    {{--<textarea name="additional-info" rows="5" cols="5" placeholder="If you want to add any info, do it here." class="form-control"></textarea>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
-                    {{--</div>--}}
                 </fieldset>
             </form>
         </div>

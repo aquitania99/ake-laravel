@@ -39,6 +39,7 @@ class StudentController extends Controller
     public function storeUser(Request $request)
     {
         $userData = json_encode( $request->getContent() );
+        dd($userData);
 
     }
 

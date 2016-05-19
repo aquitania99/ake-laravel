@@ -8,7 +8,7 @@ class Office extends Model
 {
     public function counsellors()
     {
-        return $this->hasMany(Counsellor::class, 'office_id', 'id');
+        return $this->hasMany(Counsellor::class);
     }
 
 }
