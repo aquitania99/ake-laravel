@@ -144,16 +144,21 @@ $(function() {
         },
 
         onFinished: function (event, currentIndex) {
-            var test = $("form").serialize();
+            var form = $("form");
+            console.log(form);
+            var data = form.serialize();
             $.ajax({
+                url: form.attr("action"),
                 type: 'POST',
-                url: $("form").attr("action"),
-                data: test,
+                data: data,
                 //or your custom data either as object {foo: "bar", ...} or foo=bar&...
-                success: function(response) { console.log(response) }
+                success: function(response) {
+                    console.log('Client added: ' + response)
+                    window.location.replace('/student');
+                }
             });
-            console.log(test);
-            alert("Well done Mowgli! The form has been Submitted!");
+            // console.log(test);
+            // alert("Well done Mowgli! The form has been Submitted!");
         }
     });
 

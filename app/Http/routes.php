@@ -27,7 +27,10 @@ Route::get('/student/add', 'StudentController@addUser');
 Route::get('/student/search', 'StudentController@searchUser');
 Route::get('/student/documents', 'StudentController@showDocs');
 
-Route::post('/student','StudentController@storeUser');
+Route::group(['middleware' => ['web']], function () {
+    //Your route here
+    Route::post('/student','StudentController@storeUser');
+});
 
 Route::get('/invoices', 'InvoiceController@index');
 
@@ -40,3 +43,7 @@ Route::post('/register-counsellor', [
     'uses' => 'AuthController@store',
     'as'   => 'counsellor_store_path'
 ]);
+
+Route::get('/scratch', function () {
+    return view('scratch');
+});

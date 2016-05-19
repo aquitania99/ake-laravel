@@ -34,6 +34,7 @@
             </div>
 
             <form class="steps-validation" action="{{'/student'}}" method="post" id="addUser">
+                {!! csrf_field() !!}
                 <h6>Personal data</h6>
                 <fieldset>
                     <div class="row">

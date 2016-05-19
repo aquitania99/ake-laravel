@@ -2,6 +2,7 @@
 
 namespace Minotaur\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
@@ -38,8 +39,12 @@ class StudentController extends Controller
 
     public function storeUser(Request $request)
     {
-        $userData = json_encode( $request->getContent() );
-        dd($userData);
+        $userData = json_encode($request->all(), true);
+
+        return Response::HTTP_CREATED;
+
+//        return view('scratch', [ 'test' => $userData ]);
+
 
     }
 
