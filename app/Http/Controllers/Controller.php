@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Http\Controllers;
+namespace Akela\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

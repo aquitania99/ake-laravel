@@ -1,8 +1,8 @@
 <?php
 
-namespace Minotaur\Http\Controllers\Auth;
+namespace Akela\Http\Controllers\Auth;
 
-use Minotaur\Http\Controllers\Controller;
+use Akela\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

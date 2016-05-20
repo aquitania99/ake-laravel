@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Jobs;
+namespace Akela\Jobs;
 
 use Illuminate\Bus\Queueable;
 

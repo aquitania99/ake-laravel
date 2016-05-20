@@ -1,11 +1,11 @@
 <?php
 
-namespace Minotaur\Http\Controllers;
+namespace Akela\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Minotaur\Http\Requests;
-use Minotaur\Models\Profile;
+use Akela\Http\Requests;
+use Akela\Models\Profile;
 
 class InvoiceController extends Controller
 {

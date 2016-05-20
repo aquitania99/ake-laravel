@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Events;
+namespace Akela\Events;
 
 abstract class Event
 {

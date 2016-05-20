@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        Minotaur\Providers\AppServiceProvider::class,
-        Minotaur\Providers\AuthServiceProvider::class,
-        Minotaur\Providers\EventServiceProvider::class,
-        Minotaur\Providers\RouteServiceProvider::class,
+        Akela\Providers\AppServiceProvider::class,
+        Akela\Providers\AuthServiceProvider::class,
+        Akela\Providers\EventServiceProvider::class,
+        Akela\Providers\RouteServiceProvider::class,
 
     ],
 

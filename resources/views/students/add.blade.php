@@ -621,7 +621,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>Visa type <span class="text-danger">*</span></label>
-                                    <select name="source" data-placeholder="Choose a visa type..." class="select-simple">
+                                    <select name="visa_type" data-placeholder="Choose a visa type..." class="select-simple">
                                         <option></option>
                                         <option value="1">Turism</option>
                                         <option value="2">Elicos</option>

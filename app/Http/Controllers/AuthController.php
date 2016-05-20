@@ -1,12 +1,12 @@
 <?php
 
-namespace Minotaur\Http\Controllers;
+namespace Akela\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
-use Minotaur\Http\Requests;
+use Akela\Http\Requests;
 
 class AuthController extends Controller
 {

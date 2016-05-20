@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Minotaur\User::class,
+        'model' => Akela\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Http;
+namespace Akela\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -24,11 +24,11 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \Minotaur\Http\Middleware\EncryptCookies::class,
+            \Akela\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \Minotaur\Http\Middleware\VerifyCsrfToken::class,
+            \Akela\Http\Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
@@ -44,10 +44,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \Minotaur\Http\Middleware\Authenticate::class,
+        'auth' => \Akela\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
-        'guest' => \Minotaur\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Akela\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }

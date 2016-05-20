@@ -22,7 +22,7 @@
             "database"
         ],
         "psr-4": {
-            "Minotaur\\": "app/"
+            "Akela\\": "app/"
         }
     },
     "autoload-dev": {

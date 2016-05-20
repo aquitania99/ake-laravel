@@ -11,10 +11,10 @@
 //|
 //*/
 
-$factory->define(\Minotaur\Models\User::class, function (Faker\Generator $faker) {
+$factory->define(\Akela\Models\User::class, function (Faker\Generator $faker) {
     return [
         'counsellor_id' => function () {
-            return factory(\Minotaur\Models\Counsellor::class)->create()->id;
+            return factory(\Akela\Models\Counsellor::class)->create()->id;
         },
         'type'      => 'user',
         'firstname' => $faker->firstName,
@@ -43,7 +43,7 @@ $factory->define(\Minotaur\Models\User::class, function (Faker\Generator $faker)
 //    ];
 //});
 
-$factory->define(Minotaur\Models\Profile::class, function (Faker\Generator $faker) {
+$factory->define(Akela\Models\Profile::class, function (Faker\Generator $faker) {
     return [
         'user_id' => $faker->firstName,
         'status' => $faker->lastName,
@@ -51,7 +51,7 @@ $factory->define(Minotaur\Models\Profile::class, function (Faker\Generator $fake
     ];
 });
 
-$factory->define(Minotaur\Models\Counsellor::class, function (Faker\Generator $faker) {
+$factory->define(Akela\Models\Counsellor::class, function (Faker\Generator $faker) {
     return [
         'firstname' => $faker->firstName,
         'lastname' => $faker->lastName,
@@ -63,7 +63,7 @@ $factory->define(Minotaur\Models\Counsellor::class, function (Faker\Generator $f
     ];
 });
 
-$factory->define(Minotaur\Models\Passport::class, function (Faker\Generator $faker) {
+$factory->define(Akela\Models\Passport::class, function (Faker\Generator $faker) {
     return [
         'passport_number' => $faker->numerify(),
         'passport_issue_date' => $faker->dateTimeBetween('-5 years','now'),
@@ -72,7 +72,7 @@ $factory->define(Minotaur\Models\Passport::class, function (Faker\Generator $fak
     ];
 });
 
-$factory->define(Minotaur\Models\Office::class, function (Faker\Generator $faker) {
+$factory->define(Akela\Models\Office::class, function (Faker\Generator $faker) {
     return [
         'passport_number' => $faker->numerify(),
         'passport_issue_date' => $faker->dateTimeBetween('-5 years','now'),

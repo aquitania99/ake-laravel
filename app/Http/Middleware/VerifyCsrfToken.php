@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Http\Middleware;
+namespace Akela\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Http\Middleware;
+namespace Akela\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

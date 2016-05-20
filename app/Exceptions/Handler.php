@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Exceptions;
+namespace Akela\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Minotaur\Http\Controllers;
+namespace Akela\Http\Controllers;
 
-use Minotaur\Http\Requests;
+use Akela\Http\Requests;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

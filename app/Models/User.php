@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Models;
+namespace Akela\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

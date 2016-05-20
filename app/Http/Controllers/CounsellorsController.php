@@ -1,10 +1,10 @@
 <?php
 
-namespace Minotaur\Http\Controllers;
+namespace Akela\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Minotaur\Http\Requests;
+use Akela\Http\Requests;
 
 class CounsellorsController extends Controller
 {

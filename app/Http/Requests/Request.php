@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Http\Requests;
+namespace Akela\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

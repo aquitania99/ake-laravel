@@ -1,6 +1,6 @@
 <?php
 
-namespace Minotaur\Providers;
+namespace Akela\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Minotaur\Events\SomeEvent' => [
-            'Minotaur\Listeners\EventListener',
+        'Akela\Events\SomeEvent' => [
+            'Akela\Listeners\EventListener',
         ],
     ];
 

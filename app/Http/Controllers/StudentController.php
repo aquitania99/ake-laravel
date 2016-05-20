@@ -1,13 +1,13 @@
 <?php
 
-namespace Minotaur\Http\Controllers;
+namespace Akela\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 use Illuminate\Http\Response;
-use Minotaur\Http\Requests;
-use Minotaur\Models\User;
+use Akela\Http\Requests;
+use Akela\Models\User;
 
 class StudentController extends Controller
 {
@@ -40,6 +40,9 @@ class StudentController extends Controller
     public function storeUser(Request $request)
     {
         $userData = json_encode($request->all(), true);
+
+        $user = new User();
+        
 
 //        return Response::HTTP_CREATED;
 

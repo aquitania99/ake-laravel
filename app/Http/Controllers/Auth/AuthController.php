@@ -1,10 +1,10 @@
 <?php
 
-namespace Minotaur\Http\Controllers\Auth;
+namespace Akela\Http\Controllers\Auth;
 
-use Minotaur\User;
+use Akela\User;
 use Validator;
-use Minotaur\Http\Controllers\Controller;
+use Akela\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
