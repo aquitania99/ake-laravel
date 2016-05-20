@@ -14,12 +14,15 @@ class CreateEducationDetailsTable extends Migration
     {
         Schema::create('education_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('country');
+            $table->integer('country_id');
             $table->string('study_type');
             $table->string('study_name');
-            $table->date('date_from');
-            $table->date('date_to');
+            $table->integer('from_month');
+            $table->integer('from_year');
+            $table->integer('to_month');
+            $table->integer('to_year');
             $table->string('degree_awarded');
+            $table->string('education_language');
             $table->string('institution_name');
             $table->string('institution_address');
             $table->string('institution_url');

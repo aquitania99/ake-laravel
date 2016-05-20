@@ -41,9 +41,9 @@ class StudentController extends Controller
     {
         $userData = json_encode($request->all(), true);
 
-        return Response::HTTP_CREATED;
+//        return Response::HTTP_CREATED;
 
-//        return view('scratch', [ 'test' => $userData ]);
+        return view('scratch', [ 'test' => $userData ]);
 
 
     }

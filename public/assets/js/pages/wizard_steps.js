@@ -154,7 +154,7 @@ $(function() {
                 //or your custom data either as object {foo: "bar", ...} or foo=bar&...
                 success: function(response) {
                     console.log('Client added: ' + response)
-                    window.location.replace('/student');
+                    // window.location.replace('/student');
                 }
             });
             // console.log(test);

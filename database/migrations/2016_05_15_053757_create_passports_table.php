@@ -14,7 +14,7 @@ class CreatePassportsTable extends Migration
     {
         Schema::create('passports', function($table) {
             $table->increments('id');
-            $table->integer('profile_id');
+            $table->integer('user_id');
             $table->string('passport_number');
             $table->date('passport_issue_date');
             $table->date('passport_expiry_date');
