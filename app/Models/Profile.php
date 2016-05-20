@@ -13,6 +13,6 @@ class Profile extends Model
 
     public function passport()
     {
-        return $this->hasOne(Profile::class, 'profile_id');
+        return $this->hasOne(Passport::class, 'profile_id');
     }
 }
