@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Minotaur\Models\User;
-use Minotaur\Models\Profile;
-use Minotaur\Models\Counsellor;
+use Akela\Models\User;
+use Akela\Models\Profile;
+use Akela\Models\Counsellor;
 
 class UsersTableSeeder extends Seeder
 {

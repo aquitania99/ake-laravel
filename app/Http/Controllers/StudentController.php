@@ -41,8 +41,18 @@ class StudentController extends Controller
     {
         $userData = json_encode($request->all(), true);
 
-        $user = new User();
-        
+//        $user = User::all();
+//        dd($user);
+
+        $user = New User();
+
+        $user->save([
+            "firstname" => "Sergio",
+            "lastname" => "Medina",
+            "email" => "aquitania99@gmail.com"
+        ]);
+
+        dd(User::all());
 
 //        return Response::HTTP_CREATED;
 

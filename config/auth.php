@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => Minotaur\Models\User::class,
+            'model' => Akela\Models\User::class,
         ],
 
         // 'users' => [

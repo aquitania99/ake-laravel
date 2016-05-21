@@ -27,6 +27,10 @@ class User extends Authenticatable
     public function profile() {
         return $this->hasOne(Profile::class);
     }
+
+    public function passport() {
+        return $this->hasOne(Passport::class);
+    }
     
     public function counsellors() {
         return $this->belongsTo(Counsellor::class);

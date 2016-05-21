@@ -11,7 +11,7 @@ class PassportsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\Minotaur\Models\Passport::class, 10)->create();
+        factory(\Akela\Models\Passport::class, 10)->create();
 //            ->each(function ($passport) {
 //
 //            $profile = factory(Minotaur\Models\Profile::class)->make();

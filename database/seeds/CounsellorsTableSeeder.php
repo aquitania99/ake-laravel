@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Minotaur\Models\Counsellor;
-use Minotaur\Models\User;
-use Minotaur\Models\Profile;
+use Akela\Models\Counsellor;
+use Akela\Models\User;
+use Akela\Models\Profile;
 
 class CounsellorsTableSeeder extends Seeder
 {
@@ -20,7 +20,7 @@ class CounsellorsTableSeeder extends Seeder
 
         factory(Counsellor::class, 3)->create()->each(function ($counsellor) {
 
-            $user = factory(Minotaur\Models\User::class)->make();
+            $user = factory(Akela\Models\User::class)->make();
 
             $counsellor->users()->save($user);
 
