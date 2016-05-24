@@ -39,20 +39,26 @@ class StudentController extends Controller
 
     public function storeUser(Request $request)
     {
-        $userData = json_encode($request->all(), true);
+        //@TODO Validate data from the add user form
 
-//        $user = User::all();
-//        dd($user);
-
+        // Add new user to Database
         $user = New User();
 
-        $user->save([
-            "firstname" => "Sergio",
-            "lastname" => "Medina",
-            "email" => "aquitania99@gmail.com"
-        ]);
+        $user->firstname = $request['firstname'];
+        $user->lastname = $request['lastname'];
+        $user->username = 'papafrita';
+        $user->email = $request['email'];
+        $user->password = bcrypt('Pass@word01');
+        $user->mobile = $request['mobile'];
+        $user->gender = $request['gender'];
+        $user->dob = $request['dob'];
+        $user->birth_country = 'tangamandapio';
+        $user->birth_city = $request['birth-city'];
 
-        dd(User::all());
+
+        $user->save();
+
+        dd('dd',$user);exit;
 
 //        return Response::HTTP_CREATED;
 
