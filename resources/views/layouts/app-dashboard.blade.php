@@ -56,7 +56,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="english"><img src="{{asset('assets/images/flags/gb.png')}}" alt=""> English</a></li>
                     <li><a class="espana"><img src="{{asset('assets/images/flags/es.png')}}" alt=""> Español</a></li>
-                    <li><a class="deutsch"><img src="{{asset('assets/images/flags/de.png')}}" alt=""> Deutsch</a></li>
+                    {{--<li><a class="deutsch"><img src="{{asset('assets/images/flags/de.png')}}" alt=""> Deutsch</a></li>--}}
                 </ul>
             </li>
 
@@ -121,12 +121,12 @@
                             <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
                             <li class="active"><a href="{{'/dashboard'}}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                             <li>
-                                <a href="#"><i class="fa fa-user-plus"></i> <span>Clients</span></a>
+                                <a href="#"><i class="fa fa-user-plus"></i> <span>Customers</span></a>
                                 <ul>
-                                    <li><a href="{{'/student'}}">Show Students</a></li>
-                                    <li><a href="{{'/student/add'}}">Add New Student</a></li>
-                                    <li><a href="{{'/student/search'}}">Search Student</a></li>
-                                    <li><a href="#">Update Student</a></li>
+                                    <li><a href="{{'/student'}}">Show All</a></li>
+                                    <li><a href="{{'/student/add'}}">Add New</a></li>
+                                    <li><a href="{{'/student/search'}}">Search</a></li>
+                                    {{--<li><a href="#">Update</a></li>--}}
                                     <li class="navigation-divider"></li>
                                     <li><a href="boxed_default.html">Quotations</a></li>
                                     <li><a href="{{'/student/documents'}}">Documents</a> </li>
@@ -209,17 +209,17 @@
                 <!-- Page header -->
                 <div class="page-header page-header-default">
                     <div class="page-header-content">
-                        <div class="page-title">
-                            <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Home</span> - Dashboard</h4>
-                        </div>
+                        {{--<div class="page-title">--}}
+                            {{--<h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Home</span> - Dashboard</h4>--}}
+                        {{--</div>--}}
 
-                        <div class="heading-elements">
-                            <div class="heading-btn-group">
-                                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
-                                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
-                                <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Renovations</span></a>
-                            </div>
-                        </div>
+                        {{--<div class="heading-elements">--}}
+                            {{--<div class="heading-btn-group">--}}
+                                {{--<a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>--}}
+                                {{--<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>--}}
+                                {{--<a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Renewals</span></a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
                     </div>
 
                     <div class="breadcrumb-line">
@@ -228,24 +228,24 @@
                             <li class="active">Dashboard</li>
                         </ul>
 
-                        <ul class="breadcrumb-elements">
-                            <li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="icon-gear position-left"></i>
-                                    Settings
-                                    <span class="caret"></span>
-                                </a>
+                        {{--<ul class="breadcrumb-elements">--}}
+                            {{--<li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>--}}
+                            {{--<li class="dropdown">--}}
+                                {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--}}
+                                    {{--<i class="icon-gear position-left"></i>--}}
+                                    {{--Settings--}}
+                                    {{--<span class="caret"></span>--}}
+                                {{--</a>--}}
 
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
-                                    <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
-                                    <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                                {{--<ul class="dropdown-menu dropdown-menu-right">--}}
+                                    {{--<li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>--}}
+                                    {{--<li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>--}}
+                                    {{--<li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>--}}
+                                    {{--<li class="divider"></li>--}}
+                                    {{--<li><a href="#"><i class="icon-gear"></i> All settings</a></li>--}}
+                                {{--</ul>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
                     </div>
                 </div>
                 @show

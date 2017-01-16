@@ -23,7 +23,7 @@
 <!-- Main navbar -->
 <div class="navbar navbar-inverse">
     <div class="navbar-header">
-        <a class="navbar-brand" href="{{url('/dashboard')}}"><img src="{{asset('assets/images/logo_light.png')}}" alt=""></a>
+        <a class="navbar-brand" href="{{url('/dashboard')}}"><img src="{{asset('assets/images/akela-logo-crm-1.svg')}}" alt=""></a>
 
         <ul class="nav navbar-nav pull-right visible-xs-block">
             <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -65,7 +65,7 @@
                 @yield('content')
                 <!-- Footer -->
                 <div class="footer text-muted text-center">
-                    &copy; 2016. <a href="#">MinotaurCRM</a> by <a href="http://www.sevenstudio.com.au" target="_blank">Seven Studio</a>
+                    &copy; 2016. <a href="#">Akela Solutions</a> by <a href="http://www.sevenstudio.com.au" target="_blank">Seven Studio</a>
                 </div>
                 <!-- /footer -->
             </div>
