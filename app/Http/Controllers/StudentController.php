@@ -41,28 +41,36 @@ class StudentController extends Controller
     {
         //@TODO Validate data from the add user form
 
-        // Add new user to Database
-        $user = New User();
+        if ($request->isMethod('post')) {
+            //
+//            dd( 'dd',$request->getContent(), $request->input('firstname') );
+//            $dob = $request->input('birth-year') ."-". $request->input('birth-month') ."=" . $request->input('birth-day');
+            $dob ="1975-01-25";
+            // Add new user to Database
+            $user = New User();
 
-        $user->firstname = $request['firstname'];
-        $user->lastname = $request['lastname'];
-        $user->username = 'papafrita';
-        $user->email = $request['email'];
-        $user->password = bcrypt('Pass@word01');
-        $user->mobile = $request['mobile'];
-        $user->gender = $request['gender'];
-        $user->dob = $request['dob'];
-        $user->birth_country = 'tangamandapio';
-        $user->birth_city = $request['birth-city'];
+            $user->firstname = $request->input('firstname');
+            $user->lastname = $request->input('lastname');
+            $user->username = $request->input('email');
+            $user->email = $request->input('email');
+            $user->password = bcrypt('Pass@word01');
+            $user->mobile = $request->input('mobile');
+            $user->gender = $request->input('gender');
+            $user->dob = $dob;
+            $user->birth_country = $request->input('birth-country');
+            $user->birth_city = $request->input('birth-city');
 
 
-        $user->save();
+            $user->save();
 
-        dd('dd',$user);exit;
+            dd('dd',$user);
 
-//        return Response::HTTP_CREATED;
+        }
 
-        return view('scratch', [ 'test' => $userData ]);
+
+        return Response::HTTP_CREATED;
+
+//        return view('scratch', [ 'test' => $user->jsonSerialize() ]);
 
 
     }

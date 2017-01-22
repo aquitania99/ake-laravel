@@ -25,7 +25,9 @@ $factory->define(\Akela\Models\User::class, function (Faker\Generator $faker) {
         'mobile' => $faker->phoneNumber,
         'gender' => 'M',
         'nationality' => $faker->country,
-        'dob' => $faker->date('Y-m-d','1995'),
+        'birth_country' => $faker->country,
+        'birth_city' => $faker->city,
+        'dob' => $faker->unique()->dateTimeBetween($startDate = "1970-01-01", $endDate = "1995-12-31")->format('Y-m-d'), //$faker->date('1970-01-01', '1995'),
         'remember_token' => str_random(10),
     ];
 });

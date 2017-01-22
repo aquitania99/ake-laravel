@@ -26,10 +26,12 @@ Route::get('/student', 'StudentController@index');
 Route::get('/student/add', 'StudentController@addUser');
 Route::get('/student/search', 'StudentController@searchUser');
 Route::get('/student/documents', 'StudentController@showDocs');
+Route::get('/customer','Customer\CustomerController@index');
+Route::post('/student','StudentController@storeUser');
 
 Route::group(['middleware' => ['web']], function () {
     //Your route here
-    Route::post('/student','StudentController@storeUser');
+//    Route::post('/student','StudentController@storeUser');
 });
 
 Route::get('/invoices', 'InvoiceController@index');
